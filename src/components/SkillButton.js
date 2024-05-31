@@ -68,7 +68,7 @@ const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areR
           }}
           data-tooltip-id={`tooltip-${name}`}
         >
-          <img src={getImage(image)} className="skill-button__img" />
+          <img src={getImage(image)} alt ="" className="skill-button__img" />
           <div className="skill-button__cost">
             ${cost}
           </div>
