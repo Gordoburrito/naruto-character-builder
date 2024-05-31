@@ -48,7 +48,7 @@ const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areR
       style={{ borderColor: getButtonColor(), borderWidth: '2px', borderStyle: 'solid' }}
       title={requirementText}
     >
-      <img src={skill.image} alt={skill.name} style={{ width: '50px', height: '50px' }} />
+      <img src={skill.image} style={{ width: '50px', height: '50px' }} />
       {name} - Cost: {cost} {requirementText ? ` (${requirementText})` : ''}
     </button>
   );
