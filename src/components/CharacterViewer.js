@@ -3,7 +3,7 @@ import React from 'react';
 import './CharacterViewer.css';
 import SkillButton from './SkillButton';
 
-const CharacterViewer = ({ selections, skills }) => {
+const CharacterViewer = ({ selections, skills, onSelectOption, onDeselectOption }) => {
   if (!skills) {
     console.error('Skills data is not passed to CharacterViewer');
     return <div>No skills data available.</div>;
@@ -34,10 +34,11 @@ const CharacterViewer = ({ selections, skills }) => {
               <SkillButton
                 skill={flatSkills[key]}
                 selections={selections}
-                onSelectOption={() => {}}
-                onDeselectOption={() => {}}
+                onSelectOption={onSelectOption}
+                onDeselectOption={onDeselectOption}
                 areRequirementsMet={() => true}
                 skills={skills}
+                showName={false}
               />
             </li>
           )

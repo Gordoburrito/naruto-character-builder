@@ -1,0 +1,6 @@
+.skill-tree__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+} 

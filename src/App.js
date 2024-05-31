@@ -65,7 +65,7 @@ function App() {
     <div className="app">
       <div className="app__header">
         <div className="app__character-viewer">
-          <CharacterViewer selections={selections} skills={skillsData} />
+          <CharacterViewer selections={selections} skills={skillsData} onSelectOption={handleSelectOption} onDeselectOption={handleDeselectOption} />
         </div>
         <div className="app__budget-manager">
           <BudgetManager budget={selections.budget} />

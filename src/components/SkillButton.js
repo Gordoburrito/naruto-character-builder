@@ -1,8 +1,24 @@
 import React from 'react';
+import { Tooltip as ReactTooltip } from 'react-tooltip'
+import './SkillButton.css';
 
-const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areRequirementsMet, skills }) => {
-  const { name, cost, requires } = skill;
+const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areRequirementsMet, skills, showName = true }) => {
+  const { name, cost, requires, description, image } = skill;
   const requirementText = requires ? `Requires: ${Array.isArray(requires) ? requires.join(', ') : requires}` : '';
+
+  const getTooltipText = () => {
+    let tooltip = `${name} - Cost: ${cost}`;
+    if (description) {
+      tooltip += `\nDescription: ${description}`;
+    }
+    if (requirementText) {
+      tooltip += `\n${requirementText}`;
+    }
+    if (isDisabled()) {
+      // tooltip += `\nNot available due to unmet requirements or insufficient budget.`;
+    }
+    return tooltip;
+  };
 
   const getButtonColor = () => {
     if (selections[name]) {
@@ -20,19 +36,6 @@ const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areR
     return requires && !areRequirementsMet(requires);
   };
 
-  const flattenSkills = (skills) => {
-    let flatSkillsObject = {};
-    Object.keys(skills).forEach(key => {
-      skills[key].forEach(skill => {
-        flatSkillsObject[skill.name] = skill;
-      });
-    });
-    return flatSkillsObject;
-  };
-
-  const flatSkills = flattenSkills(skills);
-  console.log(flatSkills)
-
   const handleClick = () => {
     if (selections[name]) {
       onDeselectOption(skill);
@@ -42,15 +45,32 @@ const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areR
   };
 
   return (
-    <button
-      key={name}
-      onClick={handleClick}
-      style={{ borderColor: getButtonColor(), borderWidth: '2px', borderStyle: 'solid' }}
-      title={requirementText}
-    >
-      <img src={skill.image} style={{ width: '50px', height: '50px' }} />
-      {name} - Cost: {cost} {requirementText ? ` (${requirementText})` : ''}
-    </button>
+    <>
+      <div className="skill-button">
+        <button
+          key={name}
+          onClick={handleClick}
+          style={{
+            position: 'relative',
+            borderWidth: '2px',
+            borderStyle: 'solid',
+            borderColor: getButtonColor() === 'yellow' ? 'yellow' : getButtonColor() === 'gray' ? 'gray' : 'green'
+          }}
+          data-tooltip-id={`tooltip-${name}`}
+        >
+          <img src={image} className="skill-button__img" />
+          <div className="skill-button__cost">
+            ${cost}
+          </div>
+        </button>
+        {showName && <span className="skill-button__name">{name} {requirementText ? ` (${requirementText})` : ''}</span>}
+      </div>
+      <ReactTooltip id={`tooltip-${name}`} className="skill-button__tooltip" place="top" effect="solid">
+        {getTooltipText().split('\n').map((item, index) => (
+          <div key={index} className="skill-button__tooltip-item">{item}</div>
+        ))}
+      </ReactTooltip>
+    </>
   );
 };
 

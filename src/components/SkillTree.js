@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillButton from './SkillButton';
+import './SkillTree.css';
 
 const SkillTree = ({ selections, onSelectOption, onDeselectOption, skills }) => {
   const areRequirementsMet = (requires) => {
@@ -23,14 +24,15 @@ const SkillTree = ({ selections, onSelectOption, onDeselectOption, skills }) => 
     return Object.keys(skills).map(category => (
       <div key={category}>
         <h3>{category}</h3>
-        {skills[category].map(renderSkillButton)}
+        <div className="skill-tree__skills">
+          {skills[category].map(renderSkillButton)}
+        </div>
       </div>
     ));
   };
 
   return (
     <div>
-      <h2>Skill Tree</h2>
       {renderSkillCategories()}
     </div>
   );
