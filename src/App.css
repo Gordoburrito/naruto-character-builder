@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+/* Dark mode styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* You can add more specific styles for other elements */
+header, footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+    background-color: #333333;
+    color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Sticky header styles */
+.app__header {
+    position: sticky;
+    top: 0;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px;
+    z-index: 1000; /* high z-index to ensure it stays on top */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333333;
+    margin-bottom: 20px; /* Margin to avoid covering the Skill Tree */
 }
 
-.App-link {
-  color: #61dafb;
+.app__reset-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__reset-button:hover {
+    background-color: #555555;
 }
+
+.app__budget-manager, .app__character-viewer {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Ensure other content has space from the sticky header */
+.app__skill-tree {
+    padding-top: 20px;
+}
+
+/* Add other elements and adjust colors as needed */

@@ -1,0 +1,22 @@
+.character-viewer {
+  /* Aligns the container to the left */
+  text-align: left;
+}
+
+.character-viewer__title {
+  /* Styles for the title */
+}
+
+.character-viewer__list {
+  /* Display list items in a row */
+  display: flex;
+  flex-direction: row;
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+}
+
+.character-viewer__item {
+  /* Styles for each list item */
+  margin-right: 10px; /* Adds space between items */
+}
+

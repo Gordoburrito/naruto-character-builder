@@ -1,0 +1,153 @@
+{
+  "Chakra": [
+    {
+      "name": "High Chakra",
+      "description": "Larger than average chakra pool, i.e., Uzumaki clan",
+      "cost": 6
+    },
+    {
+      "name": "Kisame-Level Chakra",
+      "description": "Extremely high chakra reserve",
+      "cost": 10
+    },
+    {
+      "name": "Perfect Chakra Control",
+      "description": "Sakura-level chakra control",
+      "cost": 5
+    }
+  ],
+  "Talents": [
+    {
+      "name": "Medical Ninjutsu Talent",
+      "cost": 1
+    },
+    {
+      "name": "Genjutsu Talent",
+      "cost": 1
+    },
+    {
+      "name": "Taijutsu Talent",
+      "cost": 1
+    },
+    {
+      "name": "Nature Release Ninjutsu Talent",
+      "cost": 1
+    }
+  ],
+  "Special Abilities": [
+    {
+      "name": "Adamantine Sealing Chains",
+      "description": "Powerful sealing technique",
+      "cost": 7,
+      "requires": "High Chakra"
+    },
+    {
+      "name": "Sage Mode",
+      "description": "Allows the user to tap into the natural energy around them",
+      "cost": 5,
+      "requires": ["High Chakra", "Perfect Chakra Control"]
+    },
+    {
+      "name": "Eight Gates",
+      "description": "Unlocks extreme physical prowess at the cost of self-damage",
+      "cost": 4,
+      "requires": "Taijutsu Talent"
+    },
+    {
+      "name": "Legendary Sannin Student",
+      "description": "Pick a Sannin to be an Apprentice of",
+      "cost": 5
+    },
+    {
+      "name": "Byakugan",
+      "description": "Gives the user near 360° vision and the ability to see chakra",
+      "cost": 3
+    },
+    {
+      "name": "Gentle Fist",
+      "description": "Combat style that requires the Byakugan to see the opponent's Chakra Pathway System",
+      "cost": 2,
+      "requires": "Byakugan"
+    },
+    {
+      "name": "Base Sharingan",
+      "description": "Grants the user enhanced perception and copying abilities",
+      "cost": 4
+    },
+    {
+      "name": "Seven Swordsmen of the Mist, Pick any one sword (No Samehada)",
+      "description": "Pick any one sword (No Samehada)",
+      "cost": 3
+    }
+  ],
+  "Clan Techniques": [
+    {
+      "name": "Yamanaka Clan Hiden",
+      "description": "Mind Control Jutsus",
+      "cost": 2
+    },
+    {
+      "name": "Nara Clan Hiden",
+      "description": "Shadow Control Jutsus",
+      "cost": 2
+    },
+    {
+      "name": "Akimichi Clan Hiden",
+      "description": "Calorie Control Jutsus",
+      "cost": 2
+    }
+  ],
+  "kekkeiGenkai": [
+    {
+      "name": "Boil",
+      "elements": ["Water", "Fire"],
+      "cost": 3
+    },
+    {
+      "name": "Ice",
+      "elements": ["Water", "Wind"],
+      "cost": 3
+    },
+    {
+      "name": "Magnet",
+      "elements": ["Wind", "Earth"],
+      "cost": 3
+    },
+    {
+      "name": "Lava",
+      "elements": ["Fire", "Earth"],
+      "cost": 3
+    },
+    {
+      "name": "Explosion",
+      "elements": ["Earth", "Lightning"],
+      "cost": 3
+    },
+    {
+      "name": "Storm",
+      "elements": ["Lightning", "Water"],
+      "cost": 3
+    }
+  ],
+  "elementalAffinities": [
+    {
+      "name": "Gain all 5 Nature Releases",
+      "description": "Fire, Wind, Lightning, Water, Earth",
+      "cost": 6
+    }
+  ],
+  "advancedNatureReleases": [
+    {
+      "name": "Dust",
+      "elements": ["Wind", "Fire", "Earth"],
+      "cost": 7,
+      "requires": "Gain all 5 Nature Releases"
+    },
+    {
+      "name": "Wood",
+      "elements": ["Water", "Earth"],
+      "cost": 8,
+      "requires": "Gain all 5 Nature Releases"
+    }
+  ]
+}
