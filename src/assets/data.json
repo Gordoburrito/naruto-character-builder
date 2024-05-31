@@ -9,7 +9,8 @@
     {
       "name": "Kisame-Level Chakra",
       "description": "Extremely high chakra reserve",
-      "cost": 10
+      "cost": 10,
+      "image": "/assets/images/kisame-level-chakra.png"
     },
     {
       "name": "Perfect Chakra Control",

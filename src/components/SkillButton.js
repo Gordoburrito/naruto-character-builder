@@ -2,6 +2,15 @@ import React from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import './SkillButton.css';
 
+// Assuming images are named after the skill names and stored in src/assets/images/
+const getImage = (imageName) => {
+  try {
+    return require(`../assets/images/${imageName}.png`); // Adjust the path as necessary
+  } catch (e) {
+    return "http://via.placeholder.com/300x300"
+  }
+};
+
 const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areRequirementsMet, skills, showName = true }) => {
   const { name, cost, requires, description, image } = skill;
   const requirementText = requires ? `Requires: ${Array.isArray(requires) ? requires.join(', ') : requires}` : '';
@@ -58,7 +67,7 @@ const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areR
           }}
           data-tooltip-id={`tooltip-${name}`}
         >
-          <img src={image} className="skill-button__img" />
+          <img src={getImage(skill.image)} className="skill-button__img" />
           <div className="skill-button__cost">
             ${cost}
           </div>
