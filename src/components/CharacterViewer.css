@@ -13,6 +13,7 @@
   flex-direction: row;
   list-style-type: none; /* Removes default list styling */
   padding: 0; /* Removes default padding */
+  min-height: 54px;
 }
 
 .character-viewer__item {
