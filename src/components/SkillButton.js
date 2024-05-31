@@ -63,7 +63,8 @@ const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areR
             position: 'relative',
             borderWidth: '2px',
             borderStyle: 'solid',
-            borderColor: getButtonColor() === 'yellow' ? 'yellow' : getButtonColor() === 'gray' ? 'gray' : 'green'
+            borderColor: getButtonColor() === 'yellow' ? 'yellow' : getButtonColor() === 'gray' ? 'gray' : 'green',
+            cursor: 'pointer'
           }}
           data-tooltip-id={`tooltip-${name}`}
         >
