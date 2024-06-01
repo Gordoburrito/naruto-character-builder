@@ -4,36 +4,43 @@
       "name": "High Chakra",
       "description": "Larger than average chakra pool, i.e., Uzumaki clan",
       "cost": 6,
-      "image": "https://i.imgur.com/6UYxZxl.png"
+      "image": "uzumaki"
     },
     {
       "name": "Kisame-Level Chakra",
       "description": "Extremely high chakra reserve",
       "cost": 10,
-      "image": "/assets/images/kisame-level-chakra.png"
+      "image": "kisame-level-chakra",
+      "image2": "Kisame"
     },
     {
       "name": "Perfect Chakra Control",
       "description": "Sakura-level chakra control",
-      "cost": 5
+      "cost": 5,
+      "image": "perfect-chakra-control"
     }
   ],
   "Talents": [
     {
       "name": "Medical Ninjutsu Talent",
-      "cost": 1
+      "cost": 1,
+      "image": "medical"
     },
     {
       "name": "Genjutsu Talent",
-      "cost": 1
+      "cost": 1,
+      "image": "genjutsu",
+      "image2": "genjutsu-2"
     },
     {
       "name": "Taijutsu Talent",
-      "cost": 1
+      "cost": 1,
+      "image": "taijutsu"
     },
     {
       "name": "Nature Release Ninjutsu Talent",
-      "cost": 1
+      "cost": 1,
+      "image": "nature-talent"
     }
   ],
   "Special Abilities": [
@@ -41,101 +48,123 @@
       "name": "Adamantine Sealing Chains",
       "description": "Powerful sealing technique",
       "cost": 7,
-      "requires": "High Chakra"
+      "requires": "High Chakra",
+      "image": "adamantine-sealing-chains",
+      "image2": "adamantine-sealing-chains-kurama"
     },
     {
       "name": "Sage Mode",
       "description": "Allows the user to tap into the natural energy around them",
       "cost": 5,
-      "requires": ["High Chakra", "Perfect Chakra Control"]
+      "requires": ["High Chakra", "Perfect Chakra Control"],
+      "image": "sage-mode"
     },
     {
       "name": "Eight Gates",
       "description": "Unlocks extreme physical prowess at the cost of self-damage",
       "cost": 4,
-      "requires": "Taijutsu Talent"
+      "requires": "Taijutsu Talent",
+      "image": "eight-gates",
+      "image2": "eight-gates"
     },
     {
       "name": "Legendary Sannin Student",
       "description": "Pick a Sannin to be an Apprentice of",
-      "cost": 5
+      "cost": 5,
+      "image": "sennin"
     },
     {
       "name": "Byakugan",
       "description": "Gives the user near 360° vision and the ability to see chakra",
-      "cost": 3
+      "cost": 3,
+      "image": "byakugan",
+      "image2": "byakugan"
     },
     {
       "name": "Gentle Fist",
       "description": "Combat style that requires the Byakugan to see the opponent's Chakra Pathway System",
       "cost": 2,
-      "requires": "Byakugan"
+      "requires": "Byakugan",
+      "image": "gentle-fist"
     },
     {
       "name": "Base Sharingan",
       "description": "Grants the user enhanced perception and copying abilities",
-      "cost": 4
+      "cost": 4,
+      "image": "sharingan"
     },
     {
       "name": "Seven Swordsmen of the Mist, Pick any one sword (No Samehada)",
       "description": "Pick any one sword (No Samehada)",
-      "cost": 3
+      "cost": 3,
+      "image": "seven-swordsmen",
+      "image2": "seven-swordsmen"
     }
   ],
   "Clan Techniques": [
     {
       "name": "Yamanaka Clan Hiden",
       "description": "Mind Control Jutsus",
-      "cost": 2
+      "cost": 2,
+      "image": "mind-transfer"
     },
     {
       "name": "Nara Clan Hiden",
       "description": "Shadow Control Jutsus",
-      "cost": 2
+      "cost": 2,
+      "image": "shadow-control"
     },
     {
       "name": "Akimichi Clan Hiden",
       "description": "Calorie Control Jutsus",
-      "cost": 2
+      "cost": 2,
+      "image": "akimichi"
     }
   ],
   "Kekkei Genkai": [
     {
       "name": "Boil",
       "elements": ["Water", "Fire"],
-      "cost": 3
+      "cost": 3,
+      "image": "boil"
     },
     {
       "name": "Ice",
       "elements": ["Water", "Wind"],
-      "cost": 3
+      "cost": 3,
+      "image": "ice"
     },
     {
       "name": "Magnet",
       "elements": ["Wind", "Earth"],
-      "cost": 3
+      "cost": 3,
+      "image": "magnet"
     },
     {
       "name": "Lava",
       "elements": ["Fire", "Earth"],
-      "cost": 3
+      "cost": 3,
+      "image": "lava"
     },
     {
       "name": "Explosion",
       "elements": ["Earth", "Lightning"],
-      "cost": 3
+      "cost": 3,
+      "image": "explosion"
     },
     {
       "name": "Storm",
       "elements": ["Lightning", "Water"],
-      "cost": 3
+      "cost": 3,
+      "image": "storm"
     }
   ],
   "Elemental Affinities": [
     {
       "name": "Gain all 5 Nature Releases",
       "description": "Fire, Wind, Lightning, Water, Earth",
-      "cost": 6
+      "cost": 6,
+      "image": "5-natures"
     }
   ],
   "Advanced Nature Releases": [
@@ -143,13 +172,15 @@
       "name": "Dust",
       "elements": ["Wind", "Fire", "Earth"],
       "cost": 7,
-      "requires": "Gain all 5 Nature Releases"
+      "requires": "Gain all 5 Nature Releases",
+      "image": "dust"
     },
     {
       "name": "Wood",
       "elements": ["Water", "Earth"],
       "cost": 8,
-      "requires": "Gain all 5 Nature Releases"
+      "requires": "Gain all 5 Nature Releases",
+      "image": "wood"
     }
   ]
 }

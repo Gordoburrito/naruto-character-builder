@@ -1,14 +1,9 @@
 import React from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import './SkillButton.css';
-
 // Assuming images are named after the skill names and stored in src/assets/images/
 const getImage = (imageName) => {
-  try {
-    return require(`../assets/images/${imageName}.png`); // Adjust the path as necessary
-  } catch (e) {
-    return "http://via.placeholder.com/300x300"
-  }
+  return process.env.PUBLIC_URL + '/images/' + imageName + '--750w.jpg'
 };
 
 const SkillButton = ({ skill, selections, onSelectOption, onDeselectOption, areRequirementsMet, skills, showName = true }) => {
